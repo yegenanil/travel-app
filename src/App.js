@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import backgroundImg from "./assets/Bg.png";
+import MainContainer from "./components/MainContainer";
+
+const Container = styled.div`
+  width: 1600px;
+  height: 969px;
+  background-image: url(${backgroundImg});
+  margin: 0 auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: relative;
+  
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container> 
+      <MainContainer />
+    </Container>
   );
 }
 
